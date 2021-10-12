@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/registrationEmptyFragment"
+        android:name="com.example.registerneo.RegistrationEmptyFragment"
+        android:label="fragment_registration_empty"
+        tools:layout="@layout/fragment_registration_empty" >
+        <action
+            android:id="@+id/action_registrationEmptyFragment_to_RCodeEmptyFragment"
+            app:destination="@id/RCodeEmptyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RCodeEmptyFragment"
+        android:name="com.example.registerneo.RCodeEmptyFragment"
+        android:label="fragment_r_code_empty"
+        tools:layout="@layout/fragment_r_code_empty" >
+        <action
+            android:id="@+id/action_RCodeEmptyFragment_to_RCodeFilledFragment"
+            app:destination="@id/RCodeFilledFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RCodeFilledFragment"
+        android:name="com.example.registerneo.RCodeFilledFragment"
+        android:label="fragment_r_code_filled"
+        tools:layout="@layout/fragment_r_code_filled" >
+        <action
+            android:id="@+id/action_RCodeFilledFragment_to_registrationNameFragment"
+            app:destination="@id/registrationNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationNameFragment"
+        android:name="com.example.registerneo.RegistrationNameFragment"
+        android:label="fragment_registration_name"
+        tools:layout="@layout/fragment_registration_name" />
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.registerneo.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_registrationEmptyFragment"
+            app:destination="@id/registrationEmptyFragment" />
+    </fragment>
+</navigation>
